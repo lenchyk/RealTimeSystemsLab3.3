@@ -28,20 +28,21 @@ public class GeneticAlgo {
 
     private int a, b, c, d, y;
     private int populationSize = 2048;
-    private double mutationRate = 0.25;
-    private double elitRate = 0.10; //???
+    private float mutationRate;///here we get user's input of mutation rate
+    private double elitRate = 0.10;
     private int maxIterations = 10000;
 
     private List<Gene> population = new ArrayList<>(populationSize);
 
 
-    public GeneticAlgo(int a, int b, int c, int d, int y) {
+    public GeneticAlgo(int a, int b, int c, int d, int y, float mutationRate) {
 
         this.a = a;
         this.b = b;
         this.c = c;
         this.d = d;
         this.y = y;
+        this.mutationRate = mutationRate;
 
         Random rand = new Random();
         for (Gene p: population){

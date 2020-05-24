@@ -12,7 +12,8 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
 
     private int a, b, c, d, y;
-    public EditText get_a, get_b, get_c, get_d, get_y;
+    private float m;
+    public EditText get_a, get_b, get_c, get_d, get_y, get_mutationRate;
     public TextView result;
 
 
@@ -32,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
                 get_c = (EditText) findViewById(R.id.c);
                 get_d = (EditText) findViewById(R.id.d);
                 get_y = (EditText) findViewById(R.id.y);
+                get_mutationRate = (EditText) findViewById(R.id.m);
 
                 if (correctInput()){
                     a = Integer.parseInt(get_a.getText().toString());
@@ -39,7 +41,8 @@ public class MainActivity extends AppCompatActivity {
                     c = Integer.parseInt(get_c.getText().toString());
                     d = Integer.parseInt(get_d.getText().toString());
                     y = Integer.parseInt(get_y.getText().toString());
-                    GeneticAlgo genetic = new GeneticAlgo(a, b, c, d, y);
+                    m = Float.parseFloat(get_mutationRate.getText().toString());
+                    GeneticAlgo genetic = new GeneticAlgo(a, b, c, d, y, m);
                     String finalResult = genetic.solution();
                     result.setText(finalResult);
                     Intent intent = new Intent(MainActivity.this, NewActivity.class);

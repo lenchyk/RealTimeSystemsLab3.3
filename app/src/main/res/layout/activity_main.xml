@@ -6,6 +6,35 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <EditText
+        android:id="@+id/m"
+        android:layout_width="66dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="138dp"
+        android:layout_marginBottom="33dp"
+        android:background="#E8E2E2"
+        android:ems="10"
+        android:inputType="numberSigned"
+        app:layout_constraintBottom_toTopOf="@+id/solve"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/mutation"
+        app:layout_constraintTop_toBottomOf="@+id/y" />
+
+    <TextView
+        android:id="@+id/mutation"
+        android:layout_width="174dp"
+        android:layout_height="27dp"
+        android:layout_marginStart="33dp"
+        android:layout_marginTop="27dp"
+        android:layout_marginBottom="33dp"
+        android:text="mutation rate = "
+        android:textColor="#050505"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/solve"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/y" />
+
     <TextView
         android:id="@+id/geneticAlgo"
         android:layout_width="326dp"
@@ -127,8 +156,8 @@
         android:id="@+id/y"
         android:layout_width="66dp"
         android:layout_height="39dp"
-        android:layout_marginTop="33dp"
-        android:layout_marginEnd="158dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="156dp"
         android:background="#E8E2E2"
         android:ems="10"
         android:inputType="numberSigned"
@@ -176,7 +205,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="165dp"
-        android:layout_marginTop="87dp"
         android:layout_marginEnd="158dp"
         android:layout_marginBottom="121dp"
         android:background="#EC0505"
@@ -185,7 +213,6 @@
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/y" />
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
